@@ -13,6 +13,7 @@
         function index(){
             $data['data'] = $this->MData->tampilData()->result();
             $this->load->view('VDashboard',$data);
+            
         }
 
         function formInput(){

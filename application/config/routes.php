@@ -10,6 +10,7 @@ $route['formInput']          = 'CPage/formInput';
 $route['prosesLogin']   = 'Clogin/prosesLogin';
 $route['LogOut']        = 'Clogin/prosesLogOut';
 $route['simpanData']    = 'CSimpan/prosesSimpan';
+$route['cetakPdf']      = 'CSimpan/cetakPdf';
 
 
 $route['404_override'] = '';

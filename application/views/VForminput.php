@@ -198,7 +198,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="<?php echo base_url('formInput');?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Input Data</p>
                 </a>
@@ -209,6 +209,14 @@
                 <a href="<?php echo base_url('dashboard');?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo base_url('cetakPdf');?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Cetak Laporan</p>
                 </a>
               </li>
             </ul>
