@@ -49,7 +49,7 @@ class CSimpan extends CI_Controller {
             echo "gagal";
         }
 
-        function hapus($datahapus){
+        function delete($datahapus){
             $this->MData->hapusData($datahapus);
             redirect(base_url('dashboard'));
         }

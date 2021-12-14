@@ -11,7 +11,7 @@ $route['prosesLogin']   = 'Clogin/prosesLogin';
 $route['LogOut']        = 'Clogin/prosesLogOut';
 $route['simpanData']    = 'CSimpan/prosesSimpan';
 $route['cetakPdf']      = 'CSimpan/cetakPdf';
-$route['delete']        = 'CSimpan/delete/$1';
+$route['delete/(:any)']        = 'CSimpan/delete/$1';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

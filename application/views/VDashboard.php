@@ -299,7 +299,7 @@
                     <td><?= $d->bahasa ?></td>
                     <td><?= $d->macamKoleksi ?></td>
                     <td><?= $d->keterangan ?></td>
-                    <td><a href="<?php echo base_url('delete/' . $d->idInventaris);?>">Hapus</a></td>
+                    <td><a href="<?php echo base_url();?>delete/<?= $d->idInventaris ?>">Hapus</a></td>
                   </tr>
                   <?php } ?>
                   </tbody>
