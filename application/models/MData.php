@@ -7,6 +7,10 @@
         function tampilData(){
             return $this->db->get('tbl_inventaris');
         }
+        function hapusData($datahapus){
+            $this->db->where('idInventaris',$datahapus);
+            $this->db->delete('berita');
+        }
     }
 
 ?>

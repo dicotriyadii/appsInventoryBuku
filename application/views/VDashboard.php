@@ -277,6 +277,7 @@
                     <th>Bahasa</th>
                     <th>Macam Koleksi</th>
                     <th>Keterangan</th>
+                    <th>Aksi</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -298,6 +299,7 @@
                     <td><?= $d->bahasa ?></td>
                     <td><?= $d->macamKoleksi ?></td>
                     <td><?= $d->keterangan ?></td>
+                    <td><a href="<?php echo base_url('delete/' . $d->idInventaris);?>">Hapus</a></td>
                   </tr>
                   <?php } ?>
                   </tbody>

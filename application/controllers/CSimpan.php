@@ -44,9 +44,14 @@ class CSimpan extends CI_Controller {
         );
         $cek = $this->MData->simpan('tbl_inventaris',$where);
         if($cek){
-            echo "Berhasil";
+            redirect(base_url('dashboard'));
         }else{
             echo "gagal";
+        }
+
+        function hapus($datahapus){
+            $this->MData->hapusData($datahapus);
+            redirect(base_url('dashboard'));
         }
     }
 
@@ -80,7 +85,7 @@ class CSimpan extends CI_Controller {
             $pdf->Cell(20,6,$row->judul,1,0); 
             $pdf->Cell(20,6,$row->penerbit,1,1); 
         }
-        
+
         $pdf->Output();
 
     }
