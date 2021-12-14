@@ -198,7 +198,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo base_url('formInput');?>" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Input Data</p>
                 </a>
@@ -231,7 +231,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Buku Inventaris</h1>
+            <h1>Form Input Inventaris Buku</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -242,71 +242,72 @@
         </div>
       </div><!-- /.container-fluid -->
     </section>
+
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Daftar Buku</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example2" class="table table-bordered table-hover">
-                  <thead>
-                  <tr>
-                    <th>Nomor</th>
-                    <th>Tanggal</th>
-                    <th>Asal Buku</th>
-                    <th>Nomor Inv.</th>
-                    <th>Pengarang</th>
-                    <th>Judul</th>
-                    <th>Penerbit</th>
-                    <th>Tahun Terbit</th>
-                    <th>JML</th>
-                    <th>No. Klasifikasi</th>
-                    <th>Bahasa</th>
-                    <th>Macam Koleksi</th>
-                    <th>Keterangan</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <?php 
-                  $no = 1;
-                  foreach($data as $d) { 
-                  ?>
-                  <tr>
-                    <td><?= $no++ ?></td>
-                    <td><?= $d->tanggal ?></td>
-                    <td><?= $d->asalBuku ?></td>
-                    <td><?= $d->nomorInventaris ?></td>
-                    <td><?= $d->pengarang ?></td>
-                    <td><?= $d->judul ?></td>
-                    <td><?= $d->penerbit ?></td>
-                    <td><?= $d->tahunTerbit ?></td>
-                    <td><?= $d->jml ?></td>
-                    <td><?= $d->nomorKlasifikasi ?></td>
-                    <td><?= $d->bahasa ?></td>
-                    <td><?= $d->macamKoleksi ?></td>
-                    <td><?= $d->keterangan ?></td>
-                  </tr>
-                  <?php } ?>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.card-body -->
+      <form action="<?php echo base_url('simpanData');?>" method="post">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Tanggal</label>
+                <input name ="tanggal" type="date" class="form-control" id="exampleInputEmail1">
             </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
+            <div class="form-group">
+                <label for="exampleInputEmail1">Asal Buku</label>
+                <input name ="asalBuku" type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Asal Buku">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nomor Inventaris</label>
+                <input name ="nomorInventaris" type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nomor Inventaris">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Pengarang</label>
+                <input name ="Pengarang" type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Pengarang">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Judul</label>
+                <input name ="judul" type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Judul">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Penerbit</label>
+                <input name ="penerbit" type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Penerbit">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Tahun Terbit</label>
+                <input name ="tahunTerbit" type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Tahun Terbit">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">JML</label>
+                <input name ="jml" ype="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan JML">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nomor Klasifikasi</label>
+                <input name ="nomorKlasifikasi" type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nomor Klasifikasi">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Bahasa</label>
+                <input name ="bahasa" type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Jenis Bahasa">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Macam Koleksi</label>
+                <input name ="macamKoleksi" type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Jenis Koleksi">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Keterangan</label>
+                <input name ="keterangan" type="text" class="form-control" id="exampleInputPassword1" placeholder="Masukkan Keterangan">
+            </div>
         </div>
-        <!-- /.row -->
-      </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+
       <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
+
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">

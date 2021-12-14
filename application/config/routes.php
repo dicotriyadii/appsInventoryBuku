@@ -1,10 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$route['default_controller'] = 'welcome';
+// Page
+$route['default_controller'] = 'Clogin';
 $route['login']              = 'Clogin';
 $route['dashboard']          = 'CPage';
+$route['formInput']          = 'CPage/formInput';
 
-// proses 
-$route['prosesLogin']  = 'Clogin/prosesLogin';
+// Proses 
+$route['prosesLogin']   = 'Clogin/prosesLogin';
+$route['LogOut']        = 'Clogin/prosesLogOut';
+$route['simpanData']    = 'CSimpan/prosesSimpan';
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
