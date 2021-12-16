@@ -48,11 +48,11 @@ class CSimpan extends CI_Controller {
         }else{
             echo "gagal";
         }
+    }
 
-        function delete($datahapus){
-            $this->MData->hapusData($datahapus);
-            redirect(base_url('dashboard'));
-        }
+    function delete($id){
+        $this->MData->hapusData($id);
+        redirect(base_url('dashboard'));
     }
 
     function cetakPdf (){

@@ -9,7 +9,7 @@
         }
         function hapusData($datahapus){
             $this->db->where('idInventaris',$datahapus);
-            $this->db->delete('berita');
+            $this->db->delete('tbl_inventaris');
         }
     }
 
